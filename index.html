@@ -13,23 +13,26 @@
         font-family: 'space mono', sans-serif;
         font-size: 24px;
       }
+      input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
     </style>
 </head>
 <body class="bg-[#c5e4e7] flex items-center justify-center min-h-screen">
-    <div class="absolute top-10 left-1/2 transform -translate-x-1/2 opacity-20 pointer-events-none z-0">
-        <img src="./images/logo.svg" alt="Logo" class="w-24 h-auto">
-      </div>
-    <!-- Main Container -->
+    <div class="absolute top-10 left-1/2 transform -translate-x-1/2 opacity-20 pointer-events-none z-0"></div>
     <div class="bg-white rounded-3xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row gap-6">
-        <!-- Left Side -->
         <div class="flex-1">
-          <!-- Bill -->
           <label for="bill" class="block text-gray-600 mb-2 text-sm">Bill</label>
           <div class="relative mb-6">
-            <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg">$</span>
-            <input type="number" id="bill" value="0" class="w-full bg-teal-50 hover:bg-teal-500 text-right p-3 pl-8 rounded-lg text-2xl font-bold">
+            <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg">₦</span>
+            <input type="number" id="bill" placeholder="0.00" class="w-full bg-teal-50 hover:bg-teal-200 text-right p-3 pl-8 rounded-lg text-2xl font-bold">
           </div>
-          <!-- Tip -->
           <label class="block text-gray-600 mb-2 text-sm">Select Tip %</label>
           <div class="grid grid-cols-3 gap-4 mb-6">
             <button class="bg-teal-900 hover:bg-teal-500 text-white text-xl py-2 rounded-lg">5%</button>
@@ -37,19 +40,16 @@
             <button class="bg-teal-900 hover:bg-teal-500 text-white text-xl py-2 rounded-lg">15%</button>
             <button class="bg-teal-900 hover:bg-teal-500 text-white text-xl py-2 rounded-lg">25%</button>
             <button class="bg-teal-900 hover:bg-teal-500 text-white text-xl py-2 rounded-lg">50%</button>
-            <input type="number" placeholder="Custom" class="bg-teal-50 hover:bg-teal-500 text-right p-2 rounded-lg text-lg">
+            <input type="number" placeholder="Custom" class="bg-teal-50 hover:bg-teal-200 text-right p-2 rounded-lg text-lg">
           </div>
-
-          <!-- People -->
           <label for="people" class="block text-gray-600 mb-2 text-sm">Number of People</label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"> 
                 <img src="./images/icon-person.svg" alt="icon-person">
             </span>
-            <input type="number" id="people" value="0" class="w-full bg-teal-50 hover:bg-teal-500 text-right p-3 pl-8 rounded-lg text-2xl font-bold">
+            <input type="number" id="people" placeholder="0" class="w-full bg-teal-50 hover:bg-teal-200 text-right p-3 pl-8 rounded-lg text-2xl font-bold">
           </div>
         </div>
-            <!-- right section -->
             <div class="bg-teal-900 text-white rounded-2xl p-8 flex flex-col justify-between w-full md:w-1/2">
                 <div class="space-y-6">
                   <div class="flex justify-between items-center">
@@ -57,17 +57,17 @@
                       <p class="text-sm">Tip Amount</p>
                       <p class="text-xs text-teal-300">/ person</p>
                     </div>
-                    <p class="text-3xl text-teal-400 font-bold">$0.00</p>
+                    <p class="text-3xl text-teal-400 font-bold">₦0.00</p>
                   </div>
                   <div class="flex justify-between items-center">
                     <div>
                       <p class="text-sm">Total</p>
                       <p class="text-xs text-teal-300">/ person</p>
                     </div>
-                    <p class="text-3xl text-teal-400 font-bold">$0.00</p>
+                    <p class="text-3xl text-teal-400 font-bold">₦0.00</p>
                   </div>
                 </div>
-                <button class="mt-8 bg-teal-900 hover:bg-teal-500 text-teal-700 text-lg text-white font-bold py-2 rounded-lg cursor-pointer" disabled>
+                <button class="mt-8 bg-[#0c7d69] hover:bg-teal-500 text-teal-700 text-lg text-white font-bold py-2 rounded-[7px] cursor-pointer" disabled>
                   Reset
                 </button>
     </section>

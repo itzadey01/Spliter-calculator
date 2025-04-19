@@ -16,15 +16,15 @@ function calculate() {
         const tipPerPerson = (bill * selectedTip) / 100 / people;
         const totalPerPerson = bill / people + tipPerPerson;
 
-        tipAmountDisplay.textContent = "$" + tipPerPerson.toFixed(2);
-        totalDisplay.textContent = "$" + totalPerPerson.toFixed(2);
+        tipAmountDisplay.textContent = "₦" + tipPerPerson.toFixed(2);
+        totalDisplay.textContent = "₦" + totalPerPerson.toFixed(2);
         resetButton.disabled = false;
         resetButton.classList.remove("cursor-not-allowed", "bg-teal-500/20");
         resetButton.classList.add("bg-teal-500");
     }
     else{
-        tipAmountDisplay.textContent = "$0.00";
-        totalDisplay.textContent = "$0.00";
+        tipAmountDisplay.textContent = "₦0.00";
+        totalDisplay.textContent = "₦0.00";
     }
 }
 
@@ -51,8 +51,8 @@ resetButton.addEventListener("click", () => {
     peopleInput.value = "0";
     customTipInput.value = "";
     selectedTip = 0;
-    tipAmountDisplay.textContent = "$0.00";
-    totalDisplay.textContent = "$0.00";
+    tipAmountDisplay.textContent = "₦0.00";
+    totalDisplay.textContent = "₦0.00";
     resetButton.disabled = true;
     resetButton.classList.add("cursor-not-allowed", "bg-teal-500/20");
     resetButton.classList.remove("bg-teal-500");
